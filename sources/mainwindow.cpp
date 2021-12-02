@@ -6,10 +6,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    // Инициализируем второе окно
-    secondWindow = new AnotherWindow();
-    // Подключаем к слоту запуска главного окна по кнопке во втором окне
-    connect(secondWindow, &AnotherWindow::firstWindow, this, &MainWindow::show);
+
+    // Инициализируем окна
+    courierWindow = new CourierWindow();
+    adminWindow = new AdminWindow();
+    clientWindow = new ClientWindow();
+
+    // Подключаем к слоту запуска главного окна по кнопке выхода в следующем окне
+    connect(courierWindow, &CourierWindow::firstWindow, this, &MainWindow::show);
+    connect(adminWindow, &AdminWindow::firstWindow, this, &MainWindow::show);
+    connect(clientWindow, &ClientWindow::firstWindow, this, &MainWindow::show);
 }
 
 MainWindow::~MainWindow()
@@ -17,13 +23,26 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_1_clicked()
 {
-    secondWindow->show();    // Показываем второе окно
-    this->close();      // Закрываем основное окно
+    clientWindow->show();    // Показываем окно клиента
+    this->close();      // Закрываем окно
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    this->close();          // Закрываем основное окно
+    courierWindow->show();    // Показываем окно курьера
+    this->close();      // Закрываем окно
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    adminWindow->show();    // Показываем окно администратора
+    this->close();      // Закрываем окно
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    QApplication::quit();          // Завершаем работу приложения
+}
+

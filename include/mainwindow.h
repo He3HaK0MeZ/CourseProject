@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "anotherwindow.h"
+#include "courierwindow.h"
+#include "adminwindow.h"
+#include "clientwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,13 +20,17 @@ public:
 
 private slots:
     // Слоты от кнопок главного экрана
-    void on_pushButton_clicked();
+    void on_pushButton_1_clicked();
     void on_pushButton_2_clicked();
+    void on_pushButton_3_clicked();
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindow *ui;
-    // Второе окно
-    AnotherWindow *secondWindow;
+
+    CourierWindow *courierWindow;
+    AdminWindow *adminWindow;
+    ClientWindow *clientWindow;
 };
 
 #endif // MAINWINDOW_H
