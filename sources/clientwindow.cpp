@@ -8,12 +8,10 @@ ClientWindow::ClientWindow(QWidget *parent) :
     ui->setupUi(this);
 
     // Инициализируем окна
-    registWindow = new ClientRegistWindow();
-    loginWindow = new ClientLoginWindow();
+    registWindow = new ClientOrderWindow();
 
     // Подключаем к слоту запуска окна меню клиента по кнопке в окнах регистрации, входа
-    connect(registWindow, &ClientRegistWindow::clientWin, this, &ClientWindow::show);
-    connect(loginWindow, &ClientLoginWindow::clientWin, this, &ClientWindow::show);
+    connect(registWindow, &ClientOrderWindow::clientWin, this, &ClientWindow::show);
 }
 
 ClientWindow::~ClientWindow()
@@ -29,14 +27,6 @@ void ClientWindow::on_pushButton_clicked()
 
 void ClientWindow::on_pushButton_2_clicked()
 {
-    loginWindow->show();
-    this->close();
-}
-
-
-void ClientWindow::on_pushButton_3_clicked()
-{
     this->close();
     emit firstWindow();
 }
-

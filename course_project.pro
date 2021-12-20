@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,9 +10,9 @@ CONFIG += c++11
 
 SOURCES += \
     sources/adminwindow.cpp \
-    sources/clientloginwindow.cpp \
-    sources/clientorderwindow.cpp \
-    sources/clientregistwindow.cpp \
+    sources/client_orderwindow.cpp \
+    sources/clientdatabase.cpp \
+    sources/clientdbwindow.cpp \
     sources/clientwindow.cpp \
     sources/courierwindow.cpp \
     sources/main.cpp \
@@ -20,18 +20,17 @@ SOURCES += \
 
 HEADERS += \
     include/adminwindow.h \
-    include/clientloginwindow.h \
-    include/clientorderwindow.h \
-    include/clientregistwindow.h \
+    include/client_orderwindow.h \
+    include/clientdatabase.h \
+    include/clientdbwindow.h \
     include/clientwindow.h \
     include/courierwindow.h \
     include/mainwindow.h
 
 FORMS += \
     forms/adminwindow.ui \
-    forms/clientloginwindow.ui \
-    forms/clientorderwindow.ui \
-    forms/clientregistwindow.ui \
+    forms/client_orderwindow.ui \
+    forms/clientdbwindow.ui \
     forms/clientwindow.ui \
     forms/courierwindow.ui \
     forms/mainwindow.ui

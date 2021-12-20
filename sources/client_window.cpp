@@ -1,5 +1,5 @@
-#include "clientorderwindow.h"
-#include "ui_clientorderwindow.h"
+#include "client_window.h"
+#include "ui_client_orderwindow.h"
 
 ClientOrderWindow::ClientOrderWindow(QWidget *parent) :
     QWidget(parent),

@@ -2,8 +2,7 @@
 #define CLIENTWINDOW_H
 
 #include <QWidget>
-#include "clientregistwindow.h"
-#include "clientloginwindow.h"
+#include "client_orderwindow.h"
 
 namespace Ui {
 class ClientWindow;
@@ -23,13 +22,11 @@ signals:
 private slots:
     void on_pushButton_clicked();
     void on_pushButton_2_clicked();
-    void on_pushButton_3_clicked();
 
 private:
     Ui::ClientWindow *ui;
 
-    ClientRegistWindow *registWindow;
-    ClientLoginWindow *loginWindow;
+    ClientOrderWindow *registWindow;
 };
 
 #endif // CLIENTWINDOW_H

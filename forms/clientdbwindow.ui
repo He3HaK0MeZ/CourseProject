@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ClientOrderWindow</class>
- <widget class="QWidget" name="ClientOrderWindow">
+ <class>ClientDbWindow</class>
+ <widget class="QWidget" name="ClientDbWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,19 +11,19 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Окно заказов</string>
+   <string>Form</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>190</x>
      <y>180</y>
-     <width>271</width>
-     <height>91</height>
+     <width>251</width>
+     <height>121</height>
     </rect>
    </property>
    <property name="text">
-    <string>Выйти</string>
+    <string>Выйти в меню</string>
    </property>
   </widget>
  </widget>
