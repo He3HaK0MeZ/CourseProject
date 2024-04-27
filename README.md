@@ -6,5 +6,3 @@
 Про макрос Q_OBJECT:
 https://ravesli.com/urok-9-sloty-signaly-i-sobytiya-v-qt5/
 (ОТКЛЮЧЕНИЕ СИГНАЛОВ)
-
-PAT: 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
